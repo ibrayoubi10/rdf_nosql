@@ -16,13 +16,23 @@ import java.util.*;
  * (Prédicat, Sujet, Objet), (Prédicat, Objet, Sujet), (Objet, Sujet, Prédicat) et (Objet, Prédicat, Sujet).
  */
 public class RDFHexaStore implements RDFStorage {
+    // Dictionary
     RDFDictionary dict = new RDFDictionary();
+    // Indexes
     Map<Integer, Map<Integer, Set<Integer>>> indexSPO = new HashMap<>();
     Map<Integer, Map<Integer, Set<Integer>>> indexSOP = new HashMap<>();
     Map<Integer, Map<Integer, Set<Integer>>> indexPSO = new HashMap<>();
     Map<Integer, Map<Integer, Set<Integer>>> indexPOS = new HashMap<>();
     Map<Integer, Map<Integer, Set<Integer>>> indexOSP = new HashMap<>();
     Map<Integer, Map<Integer, Set<Integer>>> indexOPS = new HashMap<>();
+    // Statistics
+    Map<Integer, Integer> countS = new HashMap<>();
+    Map<Integer, Integer> countP = new HashMap<>();
+    Map<Integer, Integer> countO = new HashMap<>();
+    Map<Integer, Map<Integer, Integer>> countSP = new HashMap<>();
+    Map<Integer, Map<Integer, Integer>> countSO = new HashMap<>();
+    Map<Integer, Map<Integer, Integer>> countPO = new HashMap<>();
+
 
     @Override
     public boolean add(RDFTriple triple) {
@@ -47,9 +57,15 @@ public class RDFHexaStore implements RDFStorage {
     addToIndex(indexOSP, o, s, p);  // OSP
     addToIndex(indexOPS, o, p, s);  // OPS
 
-    // 4. TODO Update statistics (for selectivity)
+    // 4. Update statistics (for selectivity)
+        countS.merge(s, 1, Integer::sum);
+        countP.merge(p, 1, Integer::sum);
+        countO.merge(o, 1, Integer::sum);
+        countSP.computeIfAbsent(s, k -> new HashMap<>()).merge(p, 1, Integer::sum);
+        countSO.computeIfAbsent(s, k -> new HashMap<>()).merge(o, 1, Integer::sum);
+        countPO.computeIfAbsent(p, k -> new HashMap<>()).merge(o, 1, Integer::sum);
 
-    return true;
+        return true;
 }
 
     // Helper method to add to a specific index
@@ -308,7 +324,54 @@ public class RDFHexaStore implements RDFStorage {
 
     @Override
     public long howMany(RDFTriple triple) {
-        throw new NotImplementedException();
+
+        Term s = triple.getTripleSubject();
+        Term p = triple.getTriplePredicate();
+        Term o = triple.getTripleObject();
+
+        boolean vs = s.isVariable();
+        boolean vp = p.isVariable();
+        boolean vo = o.isVariable();
+
+        Integer sId = vs ? null : dict.encode(s.toString());
+        Integer pId = vp ? null : dict.encode(p.toString());
+        Integer oId = vo ? null : dict.encode(o.toString());
+
+        // Pattern 0 variables = exact triple
+        if (!vs && !vp && !vo) {
+            return (indexSPO.containsKey(sId)
+                    && indexSPO.get(sId).containsKey(pId)
+                    && indexSPO.get(sId).get(pId).contains(oId))
+                    ? 1 : 0;
+        }
+
+        // One variable
+        if (vs && !vp && !vo) { // (?s, p, o)
+            return countPO.getOrDefault(pId, Collections.emptyMap())
+                    .getOrDefault(oId, 0);
+        }
+        if (!vs && vp && !vo) { // (s, ?p, o)
+            return countSO.getOrDefault(sId, Collections.emptyMap())
+                    .getOrDefault(oId, 0);
+        }
+        if (!vs && !vp && vo) { // (s, p, ?o)
+            return countSP.getOrDefault(sId, Collections.emptyMap())
+                    .getOrDefault(pId, 0);
+        }
+
+        // Two variables
+        if (vs && vp && !vo) { // (?s, ?p, o)
+            return countO.getOrDefault(oId, 0);
+        }
+        if (vs && !vp && vo) { // (?s, p, ?o)
+            return countP.getOrDefault(pId, 0);
+        }
+        if (!vs && vp && vo) { // (s, ?p, ?o)
+            return countS.getOrDefault(sId, 0);
+        }
+
+        // Three variables
+        return size();
     }
 
     @Override

@@ -24,7 +24,7 @@ public interface RDFStorage {
     /**
      * @param a atom
      * @return un itérateur de substitutions correspondant aux matchs des atomes
-     *          (i.e., sur quels termes s'envoient les variables)
+     *          (i.e., sur quels termes s'envoient les variables).
      */
     Iterator<Substitution> match(RDFTriple a);
 
@@ -37,8 +37,10 @@ public interface RDFStorage {
 
 
     /**
+     * Retourne le nombre de triplets du store correspondant à l'atome donné
+     *
      * @param a atom
-     * @return
+     * @return nombre de triplets correspondants
      */
     long howMany(RDFTriple a);
 
@@ -51,7 +53,7 @@ public interface RDFStorage {
     long size();
 
     /**
-     * Retourne une collections contenant tous les atomes du store.
+     * Retourne une collection contenant tous les atomes du store.
      * Utile pour les tests unitaires.
      *
      * @return une collection d'atomes

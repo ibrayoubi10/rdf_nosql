@@ -240,5 +240,70 @@ public class RDFHexaStoreTest {
     }
 
     @Test
+    public void testHowMany() {
+        RDFHexaStore store = new RDFHexaStore();
+
+        store.add(new RDFTriple(SUBJECT_1, PREDICATE_1, OBJECT_1));
+        store.add(new RDFTriple(SUBJECT_1, PREDICATE_1, OBJECT_3));
+        store.add(new RDFTriple(SUBJECT_2, PREDICATE_1, OBJECT_1));
+        store.add(new RDFTriple(SUBJECT_2, PREDICATE_2, OBJECT_2));
+
+        // PATTERN 0 VARIABLES
+
+        // Exact match exists
+        assertEquals(1,
+                store.howMany(new RDFTriple(SUBJECT_1, PREDICATE_1, OBJECT_1)),
+                "Exact triple should return 1");
+
+        // Exact match does NOT exist
+        assertEquals(0,
+                store.howMany(new RDFTriple(SUBJECT_1, PREDICATE_2, OBJECT_1)),
+                "Nonexistent exact triple should return 0");
+
+
+        // PATTERN 1 VARIABLE
+
+        // (?s, p1, o1) → matches (s1,p1,o1) and (s2,p1,o1)
+        assertEquals(2,
+                store.howMany(new RDFTriple(VAR_S, PREDICATE_1, OBJECT_1)),
+                "(?s, p1, o1) should match 2 triples");
+
+        // (s1, ?p, o3) → matches only (s1,p1,o3)
+        assertEquals(1,
+                store.howMany(new RDFTriple(SUBJECT_1, VAR_P, OBJECT_3)),
+                "(s1, ?p, o3) should match 1 triple");
+
+        // (s1, p1, ?o) → matches (s1,p1,o1) and (s1,p1,o3)
+        assertEquals(2,
+                store.howMany(new RDFTriple(SUBJECT_1, PREDICATE_1, VAR_O)),
+                "(s1, p1, ?o) should match 2 triples");
+
+
+        // PATTERN 2 VARIABLES
+
+        // (?s, ?p, o1) → matches (s1,p1,o1) and (s2,p1,o1)
+        assertEquals(2,
+                store.howMany(new RDFTriple(VAR_S, VAR_P, OBJECT_1)),
+                "(?s, ?p, o1) should match 2 triples");
+
+        // (?s, p1, ?o) → matches 3 triples with predicate p1
+        assertEquals(3,
+                store.howMany(new RDFTriple(VAR_S, PREDICATE_1, VAR_O)),
+                "(?s, p1, ?o) should match all 3 triples under p1");
+
+        // (s2, ?p, ?o) → matches (s2,p1,o1) and (s2,p2,o2)
+        assertEquals(2,
+                store.howMany(new RDFTriple(SUBJECT_2, VAR_P, VAR_O)),
+                "(s2, ?p, ?o) should match 2 triples");
+
+
+        // PATTERN 3 VARIABLES
+
+        assertEquals(4,
+                store.howMany(new RDFTriple(VAR_S, VAR_P, VAR_O)),
+                "(?s, ?p, ?o) should return total store size");
+    }
+
+    @Test
     public void testMatchStarQuery() {throw new NotImplementedException();}
 }
