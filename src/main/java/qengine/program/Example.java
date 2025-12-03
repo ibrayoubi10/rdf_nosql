@@ -16,16 +16,16 @@ import qengine.parser.RDFTriplesParser;
 import qengine.parser.StarQuerySparQLParser;
 
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 public final class Example {
 
 	private static final String WORKING_DIR = "data/";
 	private static final String SAMPLE_DATA_FILE = WORKING_DIR + "sample_data.nt";
 	private static final String SAMPLE_QUERY_FILE = WORKING_DIR + "sample_query.queryset";
+    private static final String RESULTS_DIR = "results/";
 
 	public static void main(String[] args) throws IOException {
 		/*
@@ -37,19 +37,32 @@ public final class Example {
 		System.out.println("\n=== Parsing Sample Queries ===");
 		List<StarQuery> starQueries = parseSparQLQueries(SAMPLE_QUERY_FILE);
 
-		/*
-		 * Exemple d'utilisation de l'évaluation de requetes par Integraal avec les objets parsés
-		 */
-		System.out.println("\n=== Executing the queries with Integraal ===");
-		FactBase factBase = new SimpleInMemoryGraphStore();
-		for (RDFTriple triple : rdfAtoms) {
-			factBase.add(triple);  // Stocker chaque RDFAtom dans le store
-		}
+        // FactBase pour votre moteur et pour l'oracle InteGraal
+        FactBase myStore = new SimpleInMemoryGraphStore();
+        FactBase oracleStore = new SimpleInMemoryGraphStore();
+        for (RDFTriple triple : rdfAtoms) {
+            myStore.add(triple);
+            oracleStore.add(triple);
+        }
+
+        FOQueryEvaluator<FOFormula> evaluator = GenericFOQueryEvaluator.defaultInstance();
 
 		// Exécuter les requêtes sur le store
-		for (StarQuery starQuery : starQueries) {
-			executeStarQuery(starQuery, factBase);
-		}
+        for (int i = 0; i < starQueries.size(); i++) {
+            StarQuery starQuery = starQueries.get(i);
+            FOQuery<FOFormulaConjunction> foQuery = starQuery.asFOQuery();
+
+            // Évaluation
+            Set<Substitution> myResults = iteratorToSet(evaluator.evaluate(foQuery, myStore));
+            Set<Substitution> oracleResults = iteratorToSet(evaluator.evaluate(foQuery, oracleStore));
+
+            // Vérification correction et complétude
+            boolean correct = oracleResults.containsAll(myResults);
+            boolean complete = myResults.containsAll(oracleResults);
+
+            // Export
+            exportResults(i + 1, starQuery, myResults, oracleResults, correct, complete);
+        }
 	}
 
 	/**
@@ -103,26 +116,44 @@ public final class Example {
 		return starQueries;
 	}
 
-	/**
-	 * Exécute une requête en étoile sur le store et affiche les résultats.
-	 *
-	 * @param starQuery La requête à exécuter
-	 * @param factBase  Le store contenant les triplets
-	 */
-	private static void executeStarQuery(StarQuery starQuery, FactBase factBase) {
-		FOQuery<FOFormulaConjunction> foQuery = starQuery.asFOQuery(); // Conversion en FOQuery
-		FOQueryEvaluator<FOFormula> evaluator = GenericFOQueryEvaluator.defaultInstance(); // Créer un évaluateur
-		Iterator<Substitution> queryResults = evaluator.evaluate(foQuery, factBase); // Évaluer la requête
+    /**
+     * Convertit un Iterator de Substitution en un Set pour faciliter la comparaison.
+     *
+     * @param iter Iterator de Substitution à convertir
+     * @return Set contenant tous les éléments de l'iterator
+     */
+    private static Set<Substitution> iteratorToSet(Iterator<Substitution> iter) {
+        Set<Substitution> set = new HashSet<>();
+        iter.forEachRemaining(set::add);
+        return set;
+    }
 
-		System.out.printf("Execution of  %s:%n", starQuery);
-		System.out.println("Answers:");
-		if (!queryResults.hasNext()) {
-			System.out.println("No answer.");
-		}
-		while (queryResults.hasNext()) {
-			Substitution result = queryResults.next();
-			System.out.println(result); // Afficher chaque réponse
-		}
-		System.out.println();
-	}
+    /**
+     * Exporte les résultats d'une requête en étoile dans un fichier texte minimal.
+     *
+     * @param queryIndex Index de la requête
+     * @param starQuery La requête en étoile évaluée
+     * @param myResults Ensemble de résultats obtenus par le système
+     * @param oracleResults Ensemble de résultats de l'oracle
+     * @param correct Indique si les résultats sont corrects
+     * @param complete Indique si les résultats sont complets
+     * @throws IOException En cas d'erreur lors de l'écriture du fichier
+     */
+    private static void exportResults(int queryIndex, StarQuery starQuery,
+                                      Set<Substitution> myResults, Set<Substitution> oracleResults,
+                                      boolean correct, boolean complete) throws IOException {
+        try (FileWriter fw = new FileWriter(RESULTS_DIR + "query" + queryIndex + "_results.txt")) {
+            fw.write("StarQuery: " + starQuery + "\n\n");
+            fw.write("=== My Results ===\n");
+            for (Substitution s : myResults) fw.write(s + "\n");
+
+            fw.write("\n=== Oracle Results ===\n");
+            for (Substitution s : oracleResults) fw.write(s + "\n");
+
+            fw.write("\n=== Comparison ===\n");
+            fw.write("Correct: " + correct + "\n");
+            fw.write("Complete: " + complete + "\n");
+        }
+        System.out.printf("Query %d exported. Correct: %b, Complete: %b%n", queryIndex, correct, complete);
+    }
 }

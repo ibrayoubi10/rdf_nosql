@@ -9,8 +9,8 @@ import java.util.Map;
  * et vice versa.
  */
 public class RDFDictionary {
-    private Map<String, Integer> stringToInt = new HashMap<>();
-    private Map<Integer, String> intToString = new HashMap<>();
+    private final Map<String, Integer> stringToInt = new HashMap<>();
+    private final Map<Integer, String> intToString = new HashMap<>();
     private int nextId = 0;
 
     /**
@@ -60,5 +60,9 @@ public class RDFDictionary {
      */
     public int size() {
         return stringToInt.size();
+    }
+
+    public Integer getIdOrNull(String value) {
+        return stringToInt.get(value);  // Returns null if not found
     }
 }

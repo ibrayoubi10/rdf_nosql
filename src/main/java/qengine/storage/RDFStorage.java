@@ -1,7 +1,6 @@
 package qengine.storage;
 
-import java.util.Collection;
-import java.util.Iterator;
+import java.util.*;
 import java.util.stream.Stream;
 
 import fr.boreal.model.logicalElements.api.Substitution;
@@ -28,13 +27,50 @@ public interface RDFStorage {
      */
     Iterator<Substitution> match(RDFTriple a);
 
-
     /**
      * @param q star query
      * @return an itérateur de substitutions décrivant les réponses à la requete
      */
-    Iterator<Substitution> match(StarQuery q);
+    default Iterator<Substitution> match(StarQuery q) {
+        List<RDFTriple> patterns = new ArrayList<>(q.getRdfAtoms());
 
+        if (patterns.isEmpty()) {
+            return Collections.emptyIterator();
+        }
+
+        // Sort patterns by selectivity
+        patterns.sort(Comparator.comparingLong(this::howMany));
+
+        // Initialize candidates with the match results of the MOST selective pattern
+        List<Substitution> candidates = new ArrayList<>();
+        match(patterns.getFirst()).forEachRemaining(candidates::add);
+
+        // Early exit: if the most selective pattern had no matches
+        if (candidates.isEmpty()) {
+            return Collections.emptyIterator();
+        }
+
+        // Iterate over the remaining patterns, starting from the second pattern
+        for (int i=1; i < patterns.size(); i++) {
+            List<Substitution> newCandidates = new ArrayList<>();
+
+            for (Substitution candidate : candidates) {
+                Iterator<Substitution> patternResults = match(patterns.get(i));
+
+                while (patternResults.hasNext()) {
+                    Optional<Substitution> merged = candidate.merged(patternResults.next());
+                    merged.ifPresent(newCandidates::add);
+                }
+            }
+
+            candidates = newCandidates;
+
+            // Early exit: if no candidates left, no need to continue
+            if (candidates.isEmpty()) break;
+        }
+
+        return candidates.iterator();
+    }
 
     /**
      * Retourne le nombre de triplets du store correspondant à l'atome donné
@@ -43,7 +79,6 @@ public interface RDFStorage {
      * @return nombre de triplets correspondants
      */
     long howMany(RDFTriple a);
-
 
     /**
      * Retourne le nombre d'atomes dans le Store.

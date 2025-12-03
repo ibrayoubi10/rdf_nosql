@@ -3,7 +3,6 @@ package qengine.storage;
 import fr.boreal.model.logicalElements.api.*;
 import fr.boreal.model.logicalElements.factory.impl.SameObjectTermFactory;
 import fr.boreal.model.logicalElements.impl.SubstitutionImpl;
-import org.apache.commons.lang3.NotImplementedException;
 import qengine.model.RDFTriple;
 import org.junit.jupiter.api.Test;
 import qengine.model.StarQuery;
@@ -23,13 +22,10 @@ public class RDFHexaStoreTest {
     private static final Literal<String> PREDICATE_2 = SameObjectTermFactory.instance().createOrGetLiteral("predicate2");
     private static final Literal<String> OBJECT_2 = SameObjectTermFactory.instance().createOrGetLiteral("object2");
     private static final Literal<String> OBJECT_3 = SameObjectTermFactory.instance().createOrGetLiteral("object3");
-    private static final Literal<String> OBJECT_4 = SameObjectTermFactory.instance().createOrGetLiteral("object4");
     private static final Variable VAR_S = SameObjectTermFactory.instance().createOrGetVariable("?s");
     private static final Variable VAR_P = SameObjectTermFactory.instance().createOrGetVariable("?p");
     private static final Variable VAR_O = SameObjectTermFactory.instance().createOrGetVariable("?o");
     private static final Variable VAR_X = SameObjectTermFactory.instance().createOrGetVariable("?x");
-    private static final Variable VAR_Y = SameObjectTermFactory.instance().createOrGetVariable("?y");
-    private static final Variable VAR_Z = SameObjectTermFactory.instance().createOrGetVariable("?z");
 
     @Test
     public void testAddAllRDFAtoms() {
@@ -83,7 +79,7 @@ public class RDFHexaStoreTest {
     @Test
     public void testAddDuplicateAtom() {
         RDFHexaStore store = new RDFHexaStore();
-    
+
         // Add the first triple
         RDFTriple triple1 = new RDFTriple(SUBJECT_1, PREDICATE_1, OBJECT_1);
         assertTrue(store.add(triple1), "First addition should return true");
@@ -219,7 +215,7 @@ public class RDFHexaStoreTest {
         assertTrue(matchedList.contains(firstResult), "Missing substitution: " + firstResult);
         assertTrue(matchedList.contains(secondResult), "Missing substitution: " + secondResult);
 
-        // Case 2: two variables (subject + object)
+        // Case 2: two variables (subject and object)
         RDFTriple twoVarAtom = new RDFTriple(VAR_S, PREDICATE_1, VAR_O);
         Iterator<Substitution> twoVarMatches = store.match(twoVarAtom);
         List<Substitution> twoVarList = new ArrayList<>();
@@ -255,7 +251,7 @@ public class RDFHexaStoreTest {
                 store.howMany(new RDFTriple(SUBJECT_1, PREDICATE_1, OBJECT_1)),
                 "Exact triple should return 1");
 
-        // Exact match does NOT exist
+        // The exact match does NOT exist
         assertEquals(0,
                 store.howMany(new RDFTriple(SUBJECT_1, PREDICATE_2, OBJECT_1)),
                 "Nonexistent exact triple should return 0");
@@ -305,5 +301,177 @@ public class RDFHexaStoreTest {
     }
 
     @Test
-    public void testMatchStarQuery() {throw new NotImplementedException();}
+    public void testMatchStarQuery() {
+        RDFHexaStore store = new RDFHexaStore();
+
+        // Setup test data
+        // Bob: knows Alice, livesIn Paris, worksAt Google
+        store.add(new RDFTriple(
+                SameObjectTermFactory.instance().createOrGetLiteral("Bob"),
+                SameObjectTermFactory.instance().createOrGetLiteral("knows"),
+                SameObjectTermFactory.instance().createOrGetLiteral("Alice")));
+        store.add(new RDFTriple(
+                SameObjectTermFactory.instance().createOrGetLiteral("Bob"),
+                SameObjectTermFactory.instance().createOrGetLiteral("livesIn"),
+                SameObjectTermFactory.instance().createOrGetLiteral("Paris")));
+        store.add(new RDFTriple(
+                SameObjectTermFactory.instance().createOrGetLiteral("Bob"),
+                SameObjectTermFactory.instance().createOrGetLiteral("worksAt"),
+                SameObjectTermFactory.instance().createOrGetLiteral("Google")));
+
+        // Charlie: knows Alice, livesIn Paris, worksAt Meta
+        store.add(new RDFTriple(
+                SameObjectTermFactory.instance().createOrGetLiteral("Charlie"),
+                SameObjectTermFactory.instance().createOrGetLiteral("knows"),
+                SameObjectTermFactory.instance().createOrGetLiteral("Alice")));
+        store.add(new RDFTriple(
+                SameObjectTermFactory.instance().createOrGetLiteral("Charlie"),
+                SameObjectTermFactory.instance().createOrGetLiteral("livesIn"),
+                SameObjectTermFactory.instance().createOrGetLiteral("Paris")));
+        store.add(new RDFTriple(
+                SameObjectTermFactory.instance().createOrGetLiteral("Charlie"),
+                SameObjectTermFactory.instance().createOrGetLiteral("worksAt"),
+                SameObjectTermFactory.instance().createOrGetLiteral("Meta")));
+
+        // David: knows Alice, livesIn London, worksAt Google
+        store.add(new RDFTriple(
+                SameObjectTermFactory.instance().createOrGetLiteral("David"),
+                SameObjectTermFactory.instance().createOrGetLiteral("knows"),
+                SameObjectTermFactory.instance().createOrGetLiteral("Alice")));
+        store.add(new RDFTriple(
+                SameObjectTermFactory.instance().createOrGetLiteral("David"),
+                SameObjectTermFactory.instance().createOrGetLiteral("livesIn"),
+                SameObjectTermFactory.instance().createOrGetLiteral("London")));
+        store.add(new RDFTriple(
+                SameObjectTermFactory.instance().createOrGetLiteral("David"),
+                SameObjectTermFactory.instance().createOrGetLiteral("worksAt"),
+                SameObjectTermFactory.instance().createOrGetLiteral("Google")));
+
+        // === TEST 1: Single pattern ===
+        // SELECT ?x WHERE { ?x knows Alice }
+        List<RDFTriple> patterns1 = List.of(
+                new RDFTriple(VAR_X,
+                        SameObjectTermFactory.instance().createOrGetLiteral("knows"),
+                        SameObjectTermFactory.instance().createOrGetLiteral("Alice"))
+        );
+        StarQuery query1 = new StarQuery("q1", patterns1, List.of(VAR_X));
+
+        List<Substitution> results1 = new ArrayList<>();
+        store.match(query1).forEachRemaining(results1::add);
+
+        assertEquals(3, results1.size(), "Should find 3 people who know Alice");
+        Set<String> names1 = extractVariableValues(results1, VAR_X);
+        assertTrue(names1.contains("Bob"));
+        assertTrue(names1.contains("Charlie"));
+        assertTrue(names1.contains("David"));
+
+        // === TEST 2: Two patterns ===
+        // SELECT ?x WHERE { ?x knows Alice. ?x livesIn Paris }
+        List<RDFTriple> patterns2 = List.of(
+                new RDFTriple(VAR_X,
+                        SameObjectTermFactory.instance().createOrGetLiteral("knows"),
+                        SameObjectTermFactory.instance().createOrGetLiteral("Alice")),
+                new RDFTriple(VAR_X,
+                        SameObjectTermFactory.instance().createOrGetLiteral("livesIn"),
+                        SameObjectTermFactory.instance().createOrGetLiteral("Paris"))
+        );
+        StarQuery query2 = new StarQuery("q2", patterns2, List.of(VAR_X));
+
+        List<Substitution> results2 = new ArrayList<>();
+        store.match(query2).forEachRemaining(results2::add);
+
+        assertEquals(2, results2.size(), "Should find 2 people who know Alice AND live in Paris");
+        Set<String> names2 = extractVariableValues(results2, VAR_X);
+        assertTrue(names2.contains("Bob"));
+        assertTrue(names2.contains("Charlie"));
+        assertFalse(names2.contains("David")); // David lives in London
+
+        // === TEST 3: Three patterns ===
+        // SELECT ?x WHERE { ?x knows Alice. ?x livesIn Paris. ?x worksAt Google }
+        List<RDFTriple> patterns3 = List.of(
+                new RDFTriple(VAR_X,
+                        SameObjectTermFactory.instance().createOrGetLiteral("knows"),
+                        SameObjectTermFactory.instance().createOrGetLiteral("Alice")),
+                new RDFTriple(VAR_X,
+                        SameObjectTermFactory.instance().createOrGetLiteral("livesIn"),
+                        SameObjectTermFactory.instance().createOrGetLiteral("Paris")),
+                new RDFTriple(VAR_X,
+                        SameObjectTermFactory.instance().createOrGetLiteral("worksAt"),
+                        SameObjectTermFactory.instance().createOrGetLiteral("Google"))
+        );
+        StarQuery query3 = new StarQuery("q3", patterns3, List.of(VAR_X));
+
+        List<Substitution> results3 = new ArrayList<>();
+        store.match(query3).forEachRemaining(results3::add);
+
+        assertEquals(1, results3.size(), "Should find only Bob");
+        Set<String> names3 = extractVariableValues(results3, VAR_X);
+        assertTrue(names3.contains("Bob"));
+
+        // === TEST 4: No results ===
+        // SELECT ?x WHERE { ?x knows Alice. ?x livesIn Tokyo }
+        List<RDFTriple> patterns4 = List.of(
+                new RDFTriple(VAR_X,
+                        SameObjectTermFactory.instance().createOrGetLiteral("knows"),
+                        SameObjectTermFactory.instance().createOrGetLiteral("Alice")),
+                new RDFTriple(VAR_X,
+                        SameObjectTermFactory.instance().createOrGetLiteral("livesIn"),
+                        SameObjectTermFactory.instance().createOrGetLiteral("Tokyo"))
+        );
+        StarQuery query4 = new StarQuery("q4", patterns4, List.of(VAR_X));
+
+        List<Substitution> results4 = new ArrayList<>();
+        store.match(query4).forEachRemaining(results4::add);
+
+        assertTrue(results4.isEmpty(), "Nobody knows Alice AND lives in Tokyo");
+
+        // === TEST 5: The first pattern has no matches ===
+        // SELECT ?x WHERE { ?x knows Nobody. ?x livesIn Paris }
+        List<RDFTriple> patterns5 = List.of(
+                new RDFTriple(VAR_X,
+                        SameObjectTermFactory.instance().createOrGetLiteral("knows"),
+                        SameObjectTermFactory.instance().createOrGetLiteral("Nobody")),
+                new RDFTriple(VAR_X,
+                        SameObjectTermFactory.instance().createOrGetLiteral("livesIn"),
+                        SameObjectTermFactory.instance().createOrGetLiteral("Paris"))
+        );
+        StarQuery query5 = new StarQuery("q5", patterns5, List.of(VAR_X));
+
+        List<Substitution> results5 = new ArrayList<>();
+        store.match(query5).forEachRemaining(results5::add);
+
+        assertTrue(results5.isEmpty(), "First pattern matches nothing");
+
+        // === TEST 6: Pattern order shouldn't affect results ===
+        // Same as TEST 2 but patterns in reverse order
+        List<RDFTriple> patterns6 = List.of(
+                new RDFTriple(VAR_X,
+                        SameObjectTermFactory.instance().createOrGetLiteral("livesIn"),
+                        SameObjectTermFactory.instance().createOrGetLiteral("Paris")),
+                new RDFTriple(VAR_X,
+                        SameObjectTermFactory.instance().createOrGetLiteral("knows"),
+                        SameObjectTermFactory.instance().createOrGetLiteral("Alice"))
+        );
+        StarQuery query6 = new StarQuery("q6", patterns6, List.of(VAR_X));
+
+        List<Substitution> results6 = new ArrayList<>();
+        store.match(query6).forEachRemaining(results6::add);
+
+        assertEquals(2, results6.size(), "Order of patterns should not affect result count");
+        Set<String> names6 = extractVariableValues(results6, VAR_X);
+        assertTrue(names6.contains("Bob"));
+        assertTrue(names6.contains("Charlie"));
+    }
+
+    // Helper method to extract values for a variable from substitutions
+    private Set<String> extractVariableValues(List<Substitution> substitutions, Variable var) {
+        Set<String> values = new HashSet<>();
+        for (Substitution sub : substitutions) {
+            Term term = sub.createImageOf(var);
+            if (term != null && !term.equals(var)) {
+                values.add(term.toString());
+            }
+        }
+        return values;
+    }
 }

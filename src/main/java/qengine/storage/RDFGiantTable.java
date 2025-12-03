@@ -6,9 +6,7 @@ import fr.boreal.model.logicalElements.api.Term;
 import fr.boreal.model.logicalElements.api.Variable;
 import fr.boreal.model.logicalElements.factory.impl.SameObjectTermFactory;
 import fr.boreal.model.logicalElements.impl.SubstitutionImpl;
-import org.apache.commons.lang3.NotImplementedException;
 import qengine.model.RDFTriple;
-import qengine.model.StarQuery;
 
 import java.util.*;
 
@@ -91,11 +89,6 @@ public class RDFGiantTable implements RDFStorage {
     /** Helper pour décoder un entier en Literal */
     private Literal<String> literal(int id) {
         return SameObjectTermFactory.instance().createOrGetLiteral(dict.decode(id));
-    }
-
-    @Override
-    public Iterator<Substitution> match(StarQuery q) {
-        throw new NotImplementedException();
     }
 
     @Override
