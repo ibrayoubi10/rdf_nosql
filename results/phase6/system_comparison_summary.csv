@@ -1,0 +1,4 @@
+system,query_count,mean_time_ms,median_time_ms,stddev_ms,p95_ms,throughput_qps
+InteGraal,34,0.1906,0.0308,0.4939,0.9917,5247.5166
+Colleague,34,3.8302,0.3721,11.2383,32.4777,261.0829
+OurPrototype,34,5.9112,0.0053,21.6509,54.5736,169.1702

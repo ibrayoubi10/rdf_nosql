@@ -1,0 +1,13 @@
+Phase 7: Query Order Analysis Summary
+=====================================
+
+ORIGINAL ORDERING:
+  Mean total time: 222.71 ms
+  Std deviation: 25.40 ms
+  Repetitions: 10
+
+SHUFFLED ORDERING:
+  Mean total time: 225.61 ms
+  Std deviation: 20.61 ms
+  Repetitions: 10
+

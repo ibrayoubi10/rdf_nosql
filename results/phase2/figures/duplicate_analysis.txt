@@ -1,0 +1,2010 @@
+============================================================
+DUPLICATE QUERY ANALYSIS REPORT
+============================================================
+
+Total queries analyzed: 1300
+Unique query structures: 913
+Duplicate query structures: 230
+Total duplicate instances: 387
+Duplication rate: 29.8%
+
+
+DETAILED DUPLICATE LIST:
+============================================================
+
+Duplicate Group 1: (3 instances)
+  - Q_1_eligibleregion: query #1
+  - Q_1_eligibleregion: query #32
+  - Q_1_eligibleregion: query #90
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country139> . }
+------------------------------------------------------------
+
+Duplicate Group 2: (2 instances)
+  - Q_1_eligibleregion: query #2
+  - Q_1_eligibleregion: query #53
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country92> . }
+------------------------------------------------------------
+
+Duplicate Group 3: (4 instances)
+  - Q_1_eligibleregion: query #3
+  - Q_1_eligibleregion: query #9
+  - Q_1_eligibleregion: query #17
+  - Q_1_eligibleregion: query #97
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country85> . }
+------------------------------------------------------------
+
+Duplicate Group 4: (2 instances)
+  - Q_1_eligibleregion: query #7
+  - Q_1_eligibleregion: query #99
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country206> . }
+------------------------------------------------------------
+
+Duplicate Group 5: (2 instances)
+  - Q_1_eligibleregion: query #8
+  - Q_1_eligibleregion: query #68
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country218> . }
+------------------------------------------------------------
+
+Duplicate Group 6: (4 instances)
+  - Q_1_eligibleregion: query #10
+  - Q_1_eligibleregion: query #26
+  - Q_1_eligibleregion: query #54
+  - Q_1_eligibleregion: query #100
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country239> . }
+------------------------------------------------------------
+
+Duplicate Group 7: (7 instances)
+  - Q_1_eligibleregion: query #12
+  - Q_1_eligibleregion: query #33
+  - Q_1_eligibleregion: query #57
+  - Q_1_eligibleregion: query #74
+  - Q_1_eligibleregion: query #81
+  - Q_1_eligibleregion: query #93
+  - Q_1_eligibleregion: query #98
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country63> . }
+------------------------------------------------------------
+
+Duplicate Group 8: (3 instances)
+  - Q_1_eligibleregion: query #13
+  - Q_1_eligibleregion: query #55
+  - Q_1_eligibleregion: query #94
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country3> . }
+------------------------------------------------------------
+
+Duplicate Group 9: (2 instances)
+  - Q_1_eligibleregion: query #15
+  - Q_1_eligibleregion: query #58
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country98> . }
+------------------------------------------------------------
+
+Duplicate Group 10: (2 instances)
+  - Q_1_eligibleregion: query #18
+  - Q_1_eligibleregion: query #71
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country46> . }
+------------------------------------------------------------
+
+Duplicate Group 11: (2 instances)
+  - Q_1_eligibleregion: query #20
+  - Q_1_eligibleregion: query #78
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country156> . }
+------------------------------------------------------------
+
+Duplicate Group 12: (2 instances)
+  - Q_1_eligibleregion: query #21
+  - Q_1_eligibleregion: query #86
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country152> . }
+------------------------------------------------------------
+
+Duplicate Group 13: (3 instances)
+  - Q_1_eligibleregion: query #23
+  - Q_1_eligibleregion: query #29
+  - Q_1_eligibleregion: query #77
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country157> . }
+------------------------------------------------------------
+
+Duplicate Group 14: (4 instances)
+  - Q_1_eligibleregion: query #25
+  - Q_1_eligibleregion: query #37
+  - Q_1_eligibleregion: query #47
+  - Q_1_eligibleregion: query #76
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country56> . }
+------------------------------------------------------------
+
+Duplicate Group 15: (2 instances)
+  - Q_1_eligibleregion: query #27
+  - Q_1_eligibleregion: query #61
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country194> . }
+------------------------------------------------------------
+
+Duplicate Group 16: (3 instances)
+  - Q_1_eligibleregion: query #30
+  - Q_1_eligibleregion: query #44
+  - Q_1_eligibleregion: query #95
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country54> . }
+------------------------------------------------------------
+
+Duplicate Group 17: (3 instances)
+  - Q_1_eligibleregion: query #31
+  - Q_1_eligibleregion: query #39
+  - Q_1_eligibleregion: query #62
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country165> . }
+------------------------------------------------------------
+
+Duplicate Group 18: (2 instances)
+  - Q_1_eligibleregion: query #35
+  - Q_1_eligibleregion: query #46
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country12> . }
+------------------------------------------------------------
+
+Duplicate Group 19: (3 instances)
+  - Q_1_eligibleregion: query #43
+  - Q_1_eligibleregion: query #64
+  - Q_1_eligibleregion: query #88
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country199> . }
+------------------------------------------------------------
+
+Duplicate Group 20: (2 instances)
+  - Q_1_eligibleregion: query #45
+  - Q_1_eligibleregion: query #52
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country96> . }
+------------------------------------------------------------
+
+Duplicate Group 21: (2 instances)
+  - Q_1_eligibleregion: query #49
+  - Q_1_eligibleregion: query #56
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country7> . }
+------------------------------------------------------------
+
+Duplicate Group 22: (2 instances)
+  - Q_1_eligibleregion: query #50
+  - Q_1_eligibleregion: query #82
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country132> . }
+------------------------------------------------------------
+
+Duplicate Group 23: (2 instances)
+  - Q_1_eligibleregion: query #51
+  - Q_1_eligibleregion: query #69
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country192> . }
+------------------------------------------------------------
+
+Duplicate Group 24: (2 instances)
+  - Q_1_eligibleregion: query #59
+  - Q_1_eligibleregion: query #67
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country126> . }
+------------------------------------------------------------
+
+Duplicate Group 25: (2 instances)
+  - Q_1_eligibleregion: query #83
+  - Q_1_eligibleregion: query #89
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/eligibleregion> <http://db.uwaterloo.ca/~galuc/wsdbm/country234> . }
+------------------------------------------------------------
+
+Duplicate Group 26: (3 instances)
+  - Q_1_includes: query #1
+  - Q_1_includes: query #45
+  - Q_1_includes: query #90
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product18441> . }
+------------------------------------------------------------
+
+Duplicate Group 27: (3 instances)
+  - Q_1_includes: query #3
+  - Q_1_includes: query #61
+  - Q_1_includes: query #64
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product25570> . }
+------------------------------------------------------------
+
+Duplicate Group 28: (3 instances)
+  - Q_1_includes: query #4
+  - Q_1_includes: query #56
+  - Q_1_includes: query #94
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product22527> . }
+------------------------------------------------------------
+
+Duplicate Group 29: (2 instances)
+  - Q_1_includes: query #5
+  - Q_1_includes: query #68
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product900> . }
+------------------------------------------------------------
+
+Duplicate Group 30: (3 instances)
+  - Q_1_includes: query #6
+  - Q_1_includes: query #13
+  - Q_1_includes: query #93
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product14101> . }
+------------------------------------------------------------
+
+Duplicate Group 31: (2 instances)
+  - Q_1_includes: query #7
+  - Q_1_includes: query #76
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product1324> . }
+------------------------------------------------------------
+
+Duplicate Group 32: (2 instances)
+  - Q_1_includes: query #8
+  - Q_1_includes: query #49
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product29793> . }
+------------------------------------------------------------
+
+Duplicate Group 33: (3 instances)
+  - Q_1_includes: query #9
+  - Q_1_includes: query #14
+  - Q_1_includes: query #42
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product29992> . }
+------------------------------------------------------------
+
+Duplicate Group 34: (2 instances)
+  - Q_1_includes: query #10
+  - Q_1_includes: query #70
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product364> . }
+------------------------------------------------------------
+
+Duplicate Group 35: (2 instances)
+  - Q_1_includes: query #12
+  - Q_1_includes: query #15
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product22347> . }
+------------------------------------------------------------
+
+Duplicate Group 36: (2 instances)
+  - Q_1_includes: query #17
+  - Q_1_includes: query #100
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product25611> . }
+------------------------------------------------------------
+
+Duplicate Group 37: (3 instances)
+  - Q_1_includes: query #18
+  - Q_1_includes: query #59
+  - Q_1_includes: query #67
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product906> . }
+------------------------------------------------------------
+
+Duplicate Group 38: (2 instances)
+  - Q_1_includes: query #19
+  - Q_1_includes: query #65
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product14641> . }
+------------------------------------------------------------
+
+Duplicate Group 39: (2 instances)
+  - Q_1_includes: query #22
+  - Q_1_includes: query #60
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product22300> . }
+------------------------------------------------------------
+
+Duplicate Group 40: (3 instances)
+  - Q_1_includes: query #25
+  - Q_1_includes: query #83
+  - Q_1_includes: query #98
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product20233> . }
+------------------------------------------------------------
+
+Duplicate Group 41: (2 instances)
+  - Q_1_includes: query #27
+  - Q_1_includes: query #30
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product8426> . }
+------------------------------------------------------------
+
+Duplicate Group 42: (2 instances)
+  - Q_1_includes: query #36
+  - Q_1_includes: query #43
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product23416> . }
+------------------------------------------------------------
+
+Duplicate Group 43: (2 instances)
+  - Q_1_includes: query #38
+  - Q_1_includes: query #96
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product26510> . }
+------------------------------------------------------------
+
+Duplicate Group 44: (2 instances)
+  - Q_1_includes: query #39
+  - Q_1_includes: query #71
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product24616> . }
+------------------------------------------------------------
+
+Duplicate Group 45: (2 instances)
+  - Q_1_includes: query #40
+  - Q_1_includes: query #88
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product7305> . }
+------------------------------------------------------------
+
+Duplicate Group 46: (2 instances)
+  - Q_1_includes: query #44
+  - Q_1_includes: query #47
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product12422> . }
+------------------------------------------------------------
+
+Duplicate Group 47: (4 instances)
+  - Q_1_includes: query #48
+  - Q_1_includes: query #62
+  - Q_1_includes: query #69
+  - Q_1_includes: query #89
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product15939> . }
+------------------------------------------------------------
+
+Duplicate Group 48: (2 instances)
+  - Q_1_includes: query #63
+  - Q_1_includes: query #95
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product27768> . }
+------------------------------------------------------------
+
+Duplicate Group 49: (2 instances)
+  - Q_1_includes: query #66
+  - Q_1_includes: query #77
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product3277> . }
+------------------------------------------------------------
+
+Duplicate Group 50: (2 instances)
+  - Q_1_includes: query #78
+  - Q_1_includes: query #87
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product30145> . }
+------------------------------------------------------------
+
+Duplicate Group 51: (2 instances)
+  - Q_1_includes: query #81
+  - Q_1_includes: query #86
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/goodrelations/includes> <http://db.uwaterloo.ca/~galuc/wsdbm/product21651> . }
+------------------------------------------------------------
+
+Duplicate Group 52: (3 instances)
+  - Q_1_likes: query #1
+  - Q_1_likes: query #45
+  - Q_1_likes: query #90
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product18441> . }
+------------------------------------------------------------
+
+Duplicate Group 53: (3 instances)
+  - Q_1_likes: query #3
+  - Q_1_likes: query #61
+  - Q_1_likes: query #64
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product25570> . }
+------------------------------------------------------------
+
+Duplicate Group 54: (3 instances)
+  - Q_1_likes: query #4
+  - Q_1_likes: query #56
+  - Q_1_likes: query #94
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product22527> . }
+------------------------------------------------------------
+
+Duplicate Group 55: (2 instances)
+  - Q_1_likes: query #5
+  - Q_1_likes: query #68
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product900> . }
+------------------------------------------------------------
+
+Duplicate Group 56: (3 instances)
+  - Q_1_likes: query #6
+  - Q_1_likes: query #13
+  - Q_1_likes: query #93
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product14101> . }
+------------------------------------------------------------
+
+Duplicate Group 57: (2 instances)
+  - Q_1_likes: query #7
+  - Q_1_likes: query #76
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product1324> . }
+------------------------------------------------------------
+
+Duplicate Group 58: (2 instances)
+  - Q_1_likes: query #8
+  - Q_1_likes: query #49
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product29793> . }
+------------------------------------------------------------
+
+Duplicate Group 59: (3 instances)
+  - Q_1_likes: query #9
+  - Q_1_likes: query #14
+  - Q_1_likes: query #42
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product29992> . }
+------------------------------------------------------------
+
+Duplicate Group 60: (2 instances)
+  - Q_1_likes: query #10
+  - Q_1_likes: query #70
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product364> . }
+------------------------------------------------------------
+
+Duplicate Group 61: (2 instances)
+  - Q_1_likes: query #12
+  - Q_1_likes: query #15
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product22347> . }
+------------------------------------------------------------
+
+Duplicate Group 62: (2 instances)
+  - Q_1_likes: query #17
+  - Q_1_likes: query #100
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product25611> . }
+------------------------------------------------------------
+
+Duplicate Group 63: (3 instances)
+  - Q_1_likes: query #18
+  - Q_1_likes: query #59
+  - Q_1_likes: query #67
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product906> . }
+------------------------------------------------------------
+
+Duplicate Group 64: (2 instances)
+  - Q_1_likes: query #19
+  - Q_1_likes: query #65
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product14641> . }
+------------------------------------------------------------
+
+Duplicate Group 65: (2 instances)
+  - Q_1_likes: query #22
+  - Q_1_likes: query #60
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product22300> . }
+------------------------------------------------------------
+
+Duplicate Group 66: (3 instances)
+  - Q_1_likes: query #25
+  - Q_1_likes: query #83
+  - Q_1_likes: query #98
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product20233> . }
+------------------------------------------------------------
+
+Duplicate Group 67: (2 instances)
+  - Q_1_likes: query #27
+  - Q_1_likes: query #30
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product8426> . }
+------------------------------------------------------------
+
+Duplicate Group 68: (2 instances)
+  - Q_1_likes: query #36
+  - Q_1_likes: query #43
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product23416> . }
+------------------------------------------------------------
+
+Duplicate Group 69: (2 instances)
+  - Q_1_likes: query #38
+  - Q_1_likes: query #96
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product26510> . }
+------------------------------------------------------------
+
+Duplicate Group 70: (2 instances)
+  - Q_1_likes: query #39
+  - Q_1_likes: query #71
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product24616> . }
+------------------------------------------------------------
+
+Duplicate Group 71: (2 instances)
+  - Q_1_likes: query #40
+  - Q_1_likes: query #88
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product7305> . }
+------------------------------------------------------------
+
+Duplicate Group 72: (2 instances)
+  - Q_1_likes: query #44
+  - Q_1_likes: query #47
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product12422> . }
+------------------------------------------------------------
+
+Duplicate Group 73: (4 instances)
+  - Q_1_likes: query #48
+  - Q_1_likes: query #62
+  - Q_1_likes: query #69
+  - Q_1_likes: query #89
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product15939> . }
+------------------------------------------------------------
+
+Duplicate Group 74: (2 instances)
+  - Q_1_likes: query #63
+  - Q_1_likes: query #95
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product27768> . }
+------------------------------------------------------------
+
+Duplicate Group 75: (2 instances)
+  - Q_1_likes: query #66
+  - Q_1_likes: query #77
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product3277> . }
+------------------------------------------------------------
+
+Duplicate Group 76: (2 instances)
+  - Q_1_likes: query #78
+  - Q_1_likes: query #87
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product30145> . }
+------------------------------------------------------------
+
+Duplicate Group 77: (2 instances)
+  - Q_1_likes: query #81
+  - Q_1_likes: query #86
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product21651> . }
+------------------------------------------------------------
+
+Duplicate Group 78: (2 instances)
+  - Q_1_nationality: query #1
+  - Q_1_nationality: query #29
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country1> . }
+------------------------------------------------------------
+
+Duplicate Group 79: (3 instances)
+  - Q_1_nationality: query #2
+  - Q_1_nationality: query #16
+  - Q_1_nationality: query #81
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country22> . }
+------------------------------------------------------------
+
+Duplicate Group 80: (3 instances)
+  - Q_1_nationality: query #3
+  - Q_1_nationality: query #28
+  - Q_1_nationality: query #36
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country243> . }
+------------------------------------------------------------
+
+Duplicate Group 81: (4 instances)
+  - Q_1_nationality: query #6
+  - Q_1_nationality: query #37
+  - Q_1_nationality: query #55
+  - Q_1_nationality: query #67
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country200> . }
+------------------------------------------------------------
+
+Duplicate Group 82: (4 instances)
+  - Q_1_nationality: query #7
+  - Q_1_nationality: query #43
+  - Q_1_nationality: query #60
+  - Q_1_nationality: query #66
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country114> . }
+------------------------------------------------------------
+
+Duplicate Group 83: (2 instances)
+  - Q_1_nationality: query #10
+  - Q_1_nationality: query #12
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country124> . }
+------------------------------------------------------------
+
+Duplicate Group 84: (2 instances)
+  - Q_1_nationality: query #14
+  - Q_1_nationality: query #77
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country235> . }
+------------------------------------------------------------
+
+Duplicate Group 85: (3 instances)
+  - Q_1_nationality: query #15
+  - Q_1_nationality: query #56
+  - Q_1_nationality: query #58
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country140> . }
+------------------------------------------------------------
+
+Duplicate Group 86: (2 instances)
+  - Q_1_nationality: query #18
+  - Q_1_nationality: query #26
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country17> . }
+------------------------------------------------------------
+
+Duplicate Group 87: (2 instances)
+  - Q_1_nationality: query #21
+  - Q_1_nationality: query #93
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country238> . }
+------------------------------------------------------------
+
+Duplicate Group 88: (3 instances)
+  - Q_1_nationality: query #22
+  - Q_1_nationality: query #42
+  - Q_1_nationality: query #44
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country143> . }
+------------------------------------------------------------
+
+Duplicate Group 89: (2 instances)
+  - Q_1_nationality: query #23
+  - Q_1_nationality: query #52
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country117> . }
+------------------------------------------------------------
+
+Duplicate Group 90: (4 instances)
+  - Q_1_nationality: query #24
+  - Q_1_nationality: query #27
+  - Q_1_nationality: query #41
+  - Q_1_nationality: query #79
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country98> . }
+------------------------------------------------------------
+
+Duplicate Group 91: (2 instances)
+  - Q_1_nationality: query #25
+  - Q_1_nationality: query #72
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country0> . }
+------------------------------------------------------------
+
+Duplicate Group 92: (2 instances)
+  - Q_1_nationality: query #30
+  - Q_1_nationality: query #31
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country80> . }
+------------------------------------------------------------
+
+Duplicate Group 93: (2 instances)
+  - Q_1_nationality: query #32
+  - Q_1_nationality: query #69
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country54> . }
+------------------------------------------------------------
+
+Duplicate Group 94: (4 instances)
+  - Q_1_nationality: query #38
+  - Q_1_nationality: query #64
+  - Q_1_nationality: query #89
+  - Q_1_nationality: query #97
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country199> . }
+------------------------------------------------------------
+
+Duplicate Group 95: (2 instances)
+  - Q_1_nationality: query #39
+  - Q_1_nationality: query #71
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country220> . }
+------------------------------------------------------------
+
+Duplicate Group 96: (2 instances)
+  - Q_1_nationality: query #40
+  - Q_1_nationality: query #48
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country53> . }
+------------------------------------------------------------
+
+Duplicate Group 97: (2 instances)
+  - Q_1_nationality: query #45
+  - Q_1_nationality: query #61
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country18> . }
+------------------------------------------------------------
+
+Duplicate Group 98: (3 instances)
+  - Q_1_nationality: query #46
+  - Q_1_nationality: query #50
+  - Q_1_nationality: query #57
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country122> . }
+------------------------------------------------------------
+
+Duplicate Group 99: (2 instances)
+  - Q_1_nationality: query #47
+  - Q_1_nationality: query #84
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country13> . }
+------------------------------------------------------------
+
+Duplicate Group 100: (2 instances)
+  - Q_1_nationality: query #51
+  - Q_1_nationality: query #59
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country123> . }
+------------------------------------------------------------
+
+Duplicate Group 101: (3 instances)
+  - Q_1_nationality: query #54
+  - Q_1_nationality: query #76
+  - Q_1_nationality: query #82
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country70> . }
+------------------------------------------------------------
+
+Duplicate Group 102: (2 instances)
+  - Q_1_nationality: query #62
+  - Q_1_nationality: query #86
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country50> . }
+------------------------------------------------------------
+
+Duplicate Group 103: (5 instances)
+  - Q_1_nationality: query #73
+  - Q_1_nationality: query #87
+  - Q_1_nationality: query #96
+  - Q_1_nationality: query #98
+  - Q_1_nationality: query #99
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country139> . }
+------------------------------------------------------------
+
+Duplicate Group 104: (2 instances)
+  - Q_1_nationality: query #75
+  - Q_1_nationality: query #91
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country229> . }
+------------------------------------------------------------
+
+Duplicate Group 105: (2 instances)
+  - Q_1_nationality: query #83
+  - Q_1_nationality: query #88
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country179> . }
+------------------------------------------------------------
+
+Duplicate Group 106: (3 instances)
+  - Q_1_nationality: query #90
+  - Q_1_nationality: query #94
+  - Q_1_nationality: query #100
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country26> . }
+------------------------------------------------------------
+
+Duplicate Group 107: (2 instances)
+  - Q_1_subscribes: query #1
+  - Q_1_subscribes: query #29
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website27> . }
+------------------------------------------------------------
+
+Duplicate Group 108: (2 instances)
+  - Q_1_subscribes: query #2
+  - Q_1_subscribes: query #81
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website577> . }
+------------------------------------------------------------
+
+Duplicate Group 109: (3 instances)
+  - Q_1_subscribes: query #3
+  - Q_1_subscribes: query #28
+  - Q_1_subscribes: query #36
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website6451> . }
+------------------------------------------------------------
+
+Duplicate Group 110: (3 instances)
+  - Q_1_subscribes: query #6
+  - Q_1_subscribes: query #37
+  - Q_1_subscribes: query #67
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website5328> . }
+------------------------------------------------------------
+
+Duplicate Group 111: (2 instances)
+  - Q_1_subscribes: query #10
+  - Q_1_subscribes: query #12
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website3302> . }
+------------------------------------------------------------
+
+Duplicate Group 112: (2 instances)
+  - Q_1_subscribes: query #14
+  - Q_1_subscribes: query #77
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website6264> . }
+------------------------------------------------------------
+
+Duplicate Group 113: (2 instances)
+  - Q_1_subscribes: query #18
+  - Q_1_subscribes: query #26
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website454> . }
+------------------------------------------------------------
+
+Duplicate Group 114: (2 instances)
+  - Q_1_subscribes: query #21
+  - Q_1_subscribes: query #93
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website6341> . }
+------------------------------------------------------------
+
+Duplicate Group 115: (2 instances)
+  - Q_1_subscribes: query #22
+  - Q_1_subscribes: query #42
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website3810> . }
+------------------------------------------------------------
+
+Duplicate Group 116: (2 instances)
+  - Q_1_subscribes: query #23
+  - Q_1_subscribes: query #52
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website3102> . }
+------------------------------------------------------------
+
+Duplicate Group 117: (4 instances)
+  - Q_1_subscribes: query #24
+  - Q_1_subscribes: query #27
+  - Q_1_subscribes: query #41
+  - Q_1_subscribes: query #79
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website2614> . }
+------------------------------------------------------------
+
+Duplicate Group 118: (2 instances)
+  - Q_1_subscribes: query #25
+  - Q_1_subscribes: query #72
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website3> . }
+------------------------------------------------------------
+
+Duplicate Group 119: (2 instances)
+  - Q_1_subscribes: query #30
+  - Q_1_subscribes: query #31
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website2137> . }
+------------------------------------------------------------
+
+Duplicate Group 120: (2 instances)
+  - Q_1_subscribes: query #32
+  - Q_1_subscribes: query #69
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website1441> . }
+------------------------------------------------------------
+
+Duplicate Group 121: (4 instances)
+  - Q_1_subscribes: query #38
+  - Q_1_subscribes: query #64
+  - Q_1_subscribes: query #89
+  - Q_1_subscribes: query #97
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website5306> . }
+------------------------------------------------------------
+
+Duplicate Group 122: (2 instances)
+  - Q_1_subscribes: query #39
+  - Q_1_subscribes: query #71
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website5844> . }
+------------------------------------------------------------
+
+Duplicate Group 123: (2 instances)
+  - Q_1_subscribes: query #40
+  - Q_1_subscribes: query #48
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website1408> . }
+------------------------------------------------------------
+
+Duplicate Group 124: (2 instances)
+  - Q_1_subscribes: query #50
+  - Q_1_subscribes: query #57
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website3241> . }
+------------------------------------------------------------
+
+Duplicate Group 125: (2 instances)
+  - Q_1_subscribes: query #51
+  - Q_1_subscribes: query #59
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website3262> . }
+------------------------------------------------------------
+
+Duplicate Group 126: (2 instances)
+  - Q_1_subscribes: query #56
+  - Q_1_subscribes: query #58
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website3716> . }
+------------------------------------------------------------
+
+Duplicate Group 127: (2 instances)
+  - Q_1_subscribes: query #60
+  - Q_1_subscribes: query #66
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website3040> . }
+------------------------------------------------------------
+
+Duplicate Group 128: (2 instances)
+  - Q_1_subscribes: query #62
+  - Q_1_subscribes: query #86
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website1338> . }
+------------------------------------------------------------
+
+Duplicate Group 129: (5 instances)
+  - Q_1_subscribes: query #73
+  - Q_1_subscribes: query #87
+  - Q_1_subscribes: query #96
+  - Q_1_subscribes: query #98
+  - Q_1_subscribes: query #99
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website3698> . }
+------------------------------------------------------------
+
+Duplicate Group 130: (2 instances)
+  - Q_1_subscribes: query #76
+  - Q_1_subscribes: query #82
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website1855> . }
+------------------------------------------------------------
+
+Duplicate Group 131: (2 instances)
+  - Q_1_subscribes: query #83
+  - Q_1_subscribes: query #88
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website4763> . }
+------------------------------------------------------------
+
+Duplicate Group 132: (3 instances)
+  - Q_1_subscribes: query #90
+  - Q_1_subscribes: query #94
+  - Q_1_subscribes: query #100
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website683> . }
+------------------------------------------------------------
+
+Duplicate Group 133: (2 instances)
+  - Q_2_likes_nationality: query #1
+  - Q_2_likes_nationality: query #68
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country1> . }
+------------------------------------------------------------
+
+Duplicate Group 134: (2 instances)
+  - Q_2_likes_nationality: query #2
+  - Q_2_likes_nationality: query #18
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country17> . }
+------------------------------------------------------------
+
+Duplicate Group 135: (4 instances)
+  - Q_2_likes_nationality: query #3
+  - Q_2_likes_nationality: query #7
+  - Q_2_likes_nationality: query #54
+  - Q_2_likes_nationality: query #95
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country117> . }
+------------------------------------------------------------
+
+Duplicate Group 136: (3 instances)
+  - Q_2_likes_nationality: query #4
+  - Q_2_likes_nationality: query #45
+  - Q_2_likes_nationality: query #82
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country22> . }
+------------------------------------------------------------
+
+Duplicate Group 137: (2 instances)
+  - Q_2_likes_nationality: query #5
+  - Q_2_likes_nationality: query #73
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country143> . }
+------------------------------------------------------------
+
+Duplicate Group 138: (3 instances)
+  - Q_2_likes_nationality: query #6
+  - Q_2_likes_nationality: query #36
+  - Q_2_likes_nationality: query #59
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country114> . }
+------------------------------------------------------------
+
+Duplicate Group 139: (2 instances)
+  - Q_2_likes_nationality: query #9
+  - Q_2_likes_nationality: query #81
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country199> . }
+------------------------------------------------------------
+
+Duplicate Group 140: (3 instances)
+  - Q_2_likes_nationality: query #10
+  - Q_2_likes_nationality: query #39
+  - Q_2_likes_nationality: query #64
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country243> . }
+------------------------------------------------------------
+
+Duplicate Group 141: (2 instances)
+  - Q_2_likes_nationality: query #11
+  - Q_2_likes_nationality: query #75
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country61> . }
+------------------------------------------------------------
+
+Duplicate Group 142: (2 instances)
+  - Q_2_likes_nationality: query #20
+  - Q_2_likes_nationality: query #33
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country123> . }
+------------------------------------------------------------
+
+Duplicate Group 143: (2 instances)
+  - Q_2_likes_nationality: query #21
+  - Q_2_likes_nationality: query #93
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country0> . }
+------------------------------------------------------------
+
+Duplicate Group 144: (2 instances)
+  - Q_2_likes_nationality: query #22
+  - Q_2_likes_nationality: query #51
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country18> . }
+------------------------------------------------------------
+
+Duplicate Group 145: (2 instances)
+  - Q_2_likes_nationality: query #23
+  - Q_2_likes_nationality: query #99
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country70> . }
+------------------------------------------------------------
+
+Duplicate Group 146: (3 instances)
+  - Q_2_likes_nationality: query #26
+  - Q_2_likes_nationality: query #58
+  - Q_2_likes_nationality: query #72
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country80> . }
+------------------------------------------------------------
+
+Duplicate Group 147: (3 instances)
+  - Q_2_likes_nationality: query #27
+  - Q_2_likes_nationality: query #65
+  - Q_2_likes_nationality: query #91
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country2> . }
+------------------------------------------------------------
+
+Duplicate Group 148: (3 instances)
+  - Q_2_likes_nationality: query #28
+  - Q_2_likes_nationality: query #60
+  - Q_2_likes_nationality: query #71
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country88> . }
+------------------------------------------------------------
+
+Duplicate Group 149: (3 instances)
+  - Q_2_likes_nationality: query #31
+  - Q_2_likes_nationality: query #46
+  - Q_2_likes_nationality: query #56
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country200> . }
+------------------------------------------------------------
+
+Duplicate Group 150: (3 instances)
+  - Q_2_likes_nationality: query #32
+  - Q_2_likes_nationality: query #79
+  - Q_2_likes_nationality: query #100
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country66> . }
+------------------------------------------------------------
+
+Duplicate Group 151: (7 instances)
+  - Q_2_likes_nationality: query #35
+  - Q_2_likes_nationality: query #62
+  - Q_2_likes_nationality: query #67
+  - Q_2_likes_nationality: query #69
+  - Q_2_likes_nationality: query #92
+  - Q_2_likes_nationality: query #96
+  - Q_2_likes_nationality: query #98
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country122> . }
+------------------------------------------------------------
+
+Duplicate Group 152: (2 instances)
+  - Q_2_likes_nationality: query #38
+  - Q_2_likes_nationality: query #63
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country53> . }
+------------------------------------------------------------
+
+Duplicate Group 153: (2 instances)
+  - Q_2_likes_nationality: query #40
+  - Q_2_likes_nationality: query #66
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country98> . }
+------------------------------------------------------------
+
+Duplicate Group 154: (4 instances)
+  - Q_2_likes_nationality: query #41
+  - Q_2_likes_nationality: query #78
+  - Q_2_likes_nationality: query #80
+  - Q_2_likes_nationality: query #85
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country131> . }
+------------------------------------------------------------
+
+Duplicate Group 155: (4 instances)
+  - Q_2_likes_nationality: query #42
+  - Q_2_likes_nationality: query #44
+  - Q_2_likes_nationality: query #74
+  - Q_2_likes_nationality: query #97
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country92> . }
+------------------------------------------------------------
+
+Duplicate Group 156: (2 instances)
+  - Q_2_likes_nationality: query #47
+  - Q_2_likes_nationality: query #61
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country139> . }
+------------------------------------------------------------
+
+Duplicate Group 157: (2 instances)
+  - Q_2_likes_nationality: query #48
+  - Q_2_likes_nationality: query #88
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country140> . }
+------------------------------------------------------------
+
+Duplicate Group 158: (3 instances)
+  - Q_2_likes_nationality: query #50
+  - Q_2_likes_nationality: query #57
+  - Q_2_likes_nationality: query #76
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country229> . }
+------------------------------------------------------------
+
+Duplicate Group 159: (2 instances)
+  - Q_2_likes_nationality: query #83
+  - Q_2_likes_nationality: query #86
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country171> . }
+------------------------------------------------------------
+
+Duplicate Group 160: (2 instances)
+  - Q_2_subscribes_likes: query #9
+  - Q_2_subscribes_likes: query #62
+
+Normalized Query:
+select ?v0 where { ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/subscribes> <http://db.uwaterloo.ca/~galuc/wsdbm/website1495> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/likes> <http://db.uwaterloo.ca/~galuc/wsdbm/product29913> . }
+------------------------------------------------------------
+
+Duplicate Group 161: (3 instances)
+  - Q_2_tag_homepage: query #2
+  - Q_2_tag_homepage: query #28
+  - Q_2_tag_homepage: query #67
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website1628> . }
+------------------------------------------------------------
+
+Duplicate Group 162: (4 instances)
+  - Q_2_tag_homepage: query #5
+  - Q_2_tag_homepage: query #55
+  - Q_2_tag_homepage: query #56
+  - Q_2_tag_homepage: query #81
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website2105> . }
+------------------------------------------------------------
+
+Duplicate Group 163: (3 instances)
+  - Q_2_tag_homepage: query #7
+  - Q_2_tag_homepage: query #31
+  - Q_2_tag_homepage: query #59
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website637> . }
+------------------------------------------------------------
+
+Duplicate Group 164: (3 instances)
+  - Q_2_tag_homepage: query #8
+  - Q_2_tag_homepage: query #34
+  - Q_2_tag_homepage: query #94
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website5983> . }
+------------------------------------------------------------
+
+Duplicate Group 165: (4 instances)
+  - Q_2_tag_homepage: query #12
+  - Q_2_tag_homepage: query #18
+  - Q_2_tag_homepage: query #32
+  - Q_2_tag_homepage: query #87
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website5908> . }
+------------------------------------------------------------
+
+Duplicate Group 166: (2 instances)
+  - Q_2_tag_homepage: query #15
+  - Q_2_tag_homepage: query #20
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website2963> . }
+------------------------------------------------------------
+
+Duplicate Group 167: (3 instances)
+  - Q_2_tag_homepage: query #16
+  - Q_2_tag_homepage: query #86
+  - Q_2_tag_homepage: query #95
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website2861> . }
+------------------------------------------------------------
+
+Duplicate Group 168: (2 instances)
+  - Q_2_tag_homepage: query #17
+  - Q_2_tag_homepage: query #77
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website707> . }
+------------------------------------------------------------
+
+Duplicate Group 169: (2 instances)
+  - Q_2_tag_homepage: query #19
+  - Q_2_tag_homepage: query #43
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website1408> . }
+------------------------------------------------------------
+
+Duplicate Group 170: (2 instances)
+  - Q_2_tag_homepage: query #21
+  - Q_2_tag_homepage: query #57
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website5455> . }
+------------------------------------------------------------
+
+Duplicate Group 171: (5 instances)
+  - Q_2_tag_homepage: query #23
+  - Q_2_tag_homepage: query #35
+  - Q_2_tag_homepage: query #61
+  - Q_2_tag_homepage: query #65
+  - Q_2_tag_homepage: query #80
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website5519> . }
+------------------------------------------------------------
+
+Duplicate Group 172: (2 instances)
+  - Q_2_tag_homepage: query #27
+  - Q_2_tag_homepage: query #51
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website438> . }
+------------------------------------------------------------
+
+Duplicate Group 173: (2 instances)
+  - Q_2_tag_homepage: query #33
+  - Q_2_tag_homepage: query #75
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website3474> . }
+------------------------------------------------------------
+
+Duplicate Group 174: (2 instances)
+  - Q_2_tag_homepage: query #36
+  - Q_2_tag_homepage: query #53
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website2314> . }
+------------------------------------------------------------
+
+Duplicate Group 175: (2 instances)
+  - Q_2_tag_homepage: query #38
+  - Q_2_tag_homepage: query #96
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website1097> . }
+------------------------------------------------------------
+
+Duplicate Group 176: (2 instances)
+  - Q_2_tag_homepage: query #45
+  - Q_2_tag_homepage: query #93
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website4440> . }
+------------------------------------------------------------
+
+Duplicate Group 177: (2 instances)
+  - Q_2_tag_homepage: query #49
+  - Q_2_tag_homepage: query #84
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website3302> . }
+------------------------------------------------------------
+
+Duplicate Group 178: (3 instances)
+  - Q_2_tag_homepage: query #52
+  - Q_2_tag_homepage: query #73
+  - Q_2_tag_homepage: query #79
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website3810> . }
+------------------------------------------------------------
+
+Duplicate Group 179: (2 instances)
+  - Q_2_tag_homepage: query #60
+  - Q_2_tag_homepage: query #72
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website454> . }
+------------------------------------------------------------
+
+Duplicate Group 180: (3 instances)
+  - Q_2_tag_homepage: query #68
+  - Q_2_tag_homepage: query #85
+  - Q_2_tag_homepage: query #91
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website3711> . }
+------------------------------------------------------------
+
+Duplicate Group 181: (2 instances)
+  - Q_2_tag_homepage: query #76
+  - Q_2_tag_homepage: query #88
+
+Normalized Query:
+select ?v0 where { ?v0 <http://ogp.me/ns ?v0 <http://xmlns.com/foaf/homepage> <http://db.uwaterloo.ca/~galuc/wsdbm/website6451> . }
+------------------------------------------------------------
+
+Duplicate Group 182: (2 instances)
+  - Q_3_location_gender_type: query #2
+  - Q_3_location_gender_type: query #30
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city7> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 183: (5 instances)
+  - Q_3_location_gender_type: query #5
+  - Q_3_location_gender_type: query #24
+  - Q_3_location_gender_type: query #46
+  - Q_3_location_gender_type: query #89
+  - Q_3_location_gender_type: query #94
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city1> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 184: (5 instances)
+  - Q_3_location_gender_type: query #6
+  - Q_3_location_gender_type: query #53
+  - Q_3_location_gender_type: query #56
+  - Q_3_location_gender_type: query #79
+  - Q_3_location_gender_type: query #86
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city0> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender0> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 185: (20 instances)
+  - Q_3_location_gender_type: query #8
+  - Q_3_location_gender_type: query #22
+  - Q_3_location_gender_type: query #25
+  - Q_3_location_gender_type: query #31
+  - Q_3_location_gender_type: query #34
+  - Q_3_location_gender_type: query #36
+  - Q_3_location_gender_type: query #42
+  - Q_3_location_gender_type: query #47
+  - Q_3_location_gender_type: query #49
+  - Q_3_location_gender_type: query #50
+  - Q_3_location_gender_type: query #51
+  - Q_3_location_gender_type: query #54
+  - Q_3_location_gender_type: query #57
+  - Q_3_location_gender_type: query #59
+  - Q_3_location_gender_type: query #60
+  - Q_3_location_gender_type: query #77
+  - Q_3_location_gender_type: query #80
+  - Q_3_location_gender_type: query #81
+  - Q_3_location_gender_type: query #88
+  - Q_3_location_gender_type: query #97
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city0> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 186: (2 instances)
+  - Q_3_location_gender_type: query #9
+  - Q_3_location_gender_type: query #43
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city124> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender0> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 187: (2 instances)
+  - Q_3_location_gender_type: query #10
+  - Q_3_location_gender_type: query #55
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city1> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender0> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 188: (4 instances)
+  - Q_3_location_gender_type: query #11
+  - Q_3_location_gender_type: query #17
+  - Q_3_location_gender_type: query #61
+  - Q_3_location_gender_type: query #78
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city3> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 189: (2 instances)
+  - Q_3_location_gender_type: query #15
+  - Q_3_location_gender_type: query #96
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city131> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender0> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 190: (2 instances)
+  - Q_3_location_gender_type: query #16
+  - Q_3_location_gender_type: query #23
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city32> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 191: (2 instances)
+  - Q_3_location_gender_type: query #19
+  - Q_3_location_gender_type: query #66
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city6> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender0> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 192: (3 instances)
+  - Q_3_location_gender_type: query #21
+  - Q_3_location_gender_type: query #41
+  - Q_3_location_gender_type: query #58
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city19> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 193: (3 instances)
+  - Q_3_location_gender_type: query #26
+  - Q_3_location_gender_type: query #52
+  - Q_3_location_gender_type: query #74
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city6> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 194: (2 instances)
+  - Q_3_location_gender_type: query #27
+  - Q_3_location_gender_type: query #68
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city110> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 195: (2 instances)
+  - Q_3_location_gender_type: query #32
+  - Q_3_location_gender_type: query #91
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city2> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender0> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 196: (2 instances)
+  - Q_3_location_gender_type: query #33
+  - Q_3_location_gender_type: query #83
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city131> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 197: (2 instances)
+  - Q_3_location_gender_type: query #37
+  - Q_3_location_gender_type: query #65
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city69> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 198: (2 instances)
+  - Q_3_location_gender_type: query #39
+  - Q_3_location_gender_type: query #84
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city22> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 199: (2 instances)
+  - Q_3_location_gender_type: query #48
+  - Q_3_location_gender_type: query #75
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city4> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 200: (2 instances)
+  - Q_3_location_gender_type: query #63
+  - Q_3_location_gender_type: query #95
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city28> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 201: (2 instances)
+  - Q_3_location_nationality_gender: query #5
+  - Q_3_location_nationality_gender: query #46
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city1> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country0> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . }
+------------------------------------------------------------
+
+Duplicate Group 202: (2 instances)
+  - Q_3_location_nationality_gender: query #24
+  - Q_3_location_nationality_gender: query #94
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city1> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country1> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . }
+------------------------------------------------------------
+
+Duplicate Group 203: (2 instances)
+  - Q_3_location_nationality_gender: query #42
+  - Q_3_location_nationality_gender: query #51
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country1> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . }
+------------------------------------------------------------
+
+Duplicate Group 204: (3 instances)
+  - Q_3_location_nationality_gender: query #57
+  - Q_3_location_nationality_gender: query #77
+  - Q_3_location_nationality_gender: query #88
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country0> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . }
+------------------------------------------------------------
+
+Duplicate Group 205: (3 instances)
+  - Q_3_nationality_gender_type: query #2
+  - Q_3_nationality_gender_type: query #27
+  - Q_3_nationality_gender_type: query #63
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country12> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 206: (5 instances)
+  - Q_3_nationality_gender_type: query #3
+  - Q_3_nationality_gender_type: query #11
+  - Q_3_nationality_gender_type: query #30
+  - Q_3_nationality_gender_type: query #80
+  - Q_3_nationality_gender_type: query #83
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country4> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 207: (2 instances)
+  - Q_3_nationality_gender_type: query #4
+  - Q_3_nationality_gender_type: query #19
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country132> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender0> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 208: (8 instances)
+  - Q_3_nationality_gender_type: query #5
+  - Q_3_nationality_gender_type: query #17
+  - Q_3_nationality_gender_type: query #35
+  - Q_3_nationality_gender_type: query #39
+  - Q_3_nationality_gender_type: query #46
+  - Q_3_nationality_gender_type: query #57
+  - Q_3_nationality_gender_type: query #77
+  - Q_3_nationality_gender_type: query #88
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country0> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 209: (2 instances)
+  - Q_3_nationality_gender_type: query #6
+  - Q_3_nationality_gender_type: query #55
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country9> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender0> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 210: (2 instances)
+  - Q_3_nationality_gender_type: query #7
+  - Q_3_nationality_gender_type: query #93
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country50> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 211: (13 instances)
+  - Q_3_nationality_gender_type: query #12
+  - Q_3_nationality_gender_type: query #18
+  - Q_3_nationality_gender_type: query #24
+  - Q_3_nationality_gender_type: query #26
+  - Q_3_nationality_gender_type: query #38
+  - Q_3_nationality_gender_type: query #42
+  - Q_3_nationality_gender_type: query #51
+  - Q_3_nationality_gender_type: query #58
+  - Q_3_nationality_gender_type: query #61
+  - Q_3_nationality_gender_type: query #68
+  - Q_3_nationality_gender_type: query #94
+  - Q_3_nationality_gender_type: query #95
+  - Q_3_nationality_gender_type: query #100
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country1> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 212: (2 instances)
+  - Q_3_nationality_gender_type: query #13
+  - Q_3_nationality_gender_type: query #22
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country8> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 213: (5 instances)
+  - Q_3_nationality_gender_type: query #14
+  - Q_3_nationality_gender_type: query #21
+  - Q_3_nationality_gender_type: query #44
+  - Q_3_nationality_gender_type: query #50
+  - Q_3_nationality_gender_type: query #65
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country2> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 214: (4 instances)
+  - Q_3_nationality_gender_type: query #15
+  - Q_3_nationality_gender_type: query #29
+  - Q_3_nationality_gender_type: query #62
+  - Q_3_nationality_gender_type: query #92
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country4> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender0> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 215: (3 instances)
+  - Q_3_nationality_gender_type: query #16
+  - Q_3_nationality_gender_type: query #37
+  - Q_3_nationality_gender_type: query #87
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country184> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 216: (2 instances)
+  - Q_3_nationality_gender_type: query #25
+  - Q_3_nationality_gender_type: query #84
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country216> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 217: (2 instances)
+  - Q_3_nationality_gender_type: query #32
+  - Q_3_nationality_gender_type: query #53
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country31> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender0> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 218: (2 instances)
+  - Q_3_nationality_gender_type: query #33
+  - Q_3_nationality_gender_type: query #74
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country5> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 219: (2 instances)
+  - Q_3_nationality_gender_type: query #40
+  - Q_3_nationality_gender_type: query #49
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country31> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 220: (2 instances)
+  - Q_3_nationality_gender_type: query #48
+  - Q_3_nationality_gender_type: query #78
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country45> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 221: (4 instances)
+  - Q_3_nationality_gender_type: query #52
+  - Q_3_nationality_gender_type: query #59
+  - Q_3_nationality_gender_type: query #70
+  - Q_3_nationality_gender_type: query #90
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country6> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 222: (2 instances)
+  - Q_3_nationality_gender_type: query #66
+  - Q_3_nationality_gender_type: query #79
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country56> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender0> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 223: (4 instances)
+  - Q_3_nationality_gender_type: query #73
+  - Q_3_nationality_gender_type: query #91
+  - Q_3_nationality_gender_type: query #96
+  - Q_3_nationality_gender_type: query #99
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country0> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender0> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 224: (2 instances)
+  - Q_3_nationality_gender_type: query #75
+  - Q_3_nationality_gender_type: query #81
+
+Normalized Query:
+select ?v0 where { ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country47> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 225: (2 instances)
+  - Q_4_location_nationality_gender_type: query #26
+  - Q_4_location_nationality_gender_type: query #33
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country35> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 226: (2 instances)
+  - Q_4_location_nationality_gender_type: query #29
+  - Q_4_location_nationality_gender_type: query #92
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city21> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country1> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 227: (2 instances)
+  - Q_4_location_nationality_gender_type: query #34
+  - Q_4_location_nationality_gender_type: query #54
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country0> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender0> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 228: (3 instances)
+  - Q_4_location_nationality_gender_type: query #58
+  - Q_4_location_nationality_gender_type: query #68
+  - Q_4_location_nationality_gender_type: query #88
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country1> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 229: (2 instances)
+  - Q_4_location_nationality_gender_type: query #65
+  - Q_4_location_nationality_gender_type: query #90
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city0> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country0> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------
+
+Duplicate Group 230: (2 instances)
+  - Q_4_location_nationality_gender_type: query #79
+  - Q_4_location_nationality_gender_type: query #99
+
+Normalized Query:
+select ?v0 where { ?v0 <http://purl.org/dc/terms/location> <http://db.uwaterloo.ca/~galuc/wsdbm/city1> . ?v0 <http://schema.org/nationality> <http://db.uwaterloo.ca/~galuc/wsdbm/country1> . ?v0 <http://db.uwaterloo.ca/~galuc/wsdbm/gender> <http://db.uwaterloo.ca/~galuc/wsdbm/gender1> . ?v0 <http://www.w3.org/1999/02/22-rdf-syntax-ns }
+------------------------------------------------------------

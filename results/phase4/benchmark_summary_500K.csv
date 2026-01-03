@@ -1,0 +1,13 @@
+metric,value,unit
+dataset,500K,
+triple_count,528709,triples
+query_count,913,queries
+data_load_time,1210.00,ms
+warmup_time,46611.00,ms
+measurement_time,32401.00,ms
+warmup_iterations,50,iterations
+measurement_repetitions,30,repetitions
+overall_mean_query_time,1.1806,ms
+overall_median_query_time,0.0002,ms
+overall_stddev_query_time,6.5003,ms
+throughput,847.00,queries/sec
